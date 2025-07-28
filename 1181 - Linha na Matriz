@@ -1,0 +1,23 @@
+m = 12  
+n = 12 
+
+linha = int(input())
+operacao = input()
+
+matriz = []
+for i in range(n):
+    linha_valores = []
+    for j in range(m):
+        valor = float(input())
+        linha_valores.append(valor)
+    matriz.append(linha_valores)
+
+soma = 0
+for j in range(m):
+    soma += matriz[linha][j]  
+
+if operacao == 'S':
+    print(f"{soma:.1f}")
+elif operacao == 'M':
+    media = soma / m 
+    print(f"{media:.1f}")
